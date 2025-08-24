@@ -10,7 +10,7 @@ Updated by   : Vi Vo
 	- Test framework: MSTest
 	
 2. Structure of project
-   This project is designed based on a 3-layer model:
+   This project is designed on a 3-layer model:
    
 	- KiwiLib.DAL: Is data access layer, interact directly with data store. In this example, data is stored in list variables within this library.
 		There are 3 classes stand for 3 different tables to store Books, Author and Catogery information:
