@@ -18,8 +18,11 @@ namespace KiwiLib.Tests
             Assert.IsTrue(addResult.Success);
             Assert.AreEqual(addResult.Message, "Book added successfully.");
             Assert.IsTrue(addResult.BookId > 0); // new Id generated
-
+            
+            // Act
             var book = await bookServices.GetBooksAsync(addResult.BookId);
+
+            // Assert
             Assert.IsNotNull(book);
             Assert.AreEqual(book.Isbn, "9781234567897");
             Assert.AreEqual(book.Title, "New Book for Unitest");
